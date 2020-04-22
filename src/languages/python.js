@@ -10,7 +10,7 @@ function(hljs) {
     keyword:
       'and elif is global as in if from raise for except finally print import pass return ' +
       'exec else break not with class assert yield try while continue del or def lambda ' +
-      'async await nonlocal|10',
+      'async await nonlocal|10 input',
     built_in:
       'Ellipsis NotImplemented',
     literal: 'False None True'
@@ -123,7 +123,7 @@ function(hljs) {
         begin: /^[\t ]*@/, end: /$/
       },
       {
-        begin: /\b(print|exec)\(/ // don’t highlight keywords-turned-functions in Python 3
+        begin: /\b(exec)\(/ // don’t highlight keywords-turned-functions in Python 3
       }
     ]
   };
